@@ -10,6 +10,7 @@ Repositório voltado ao desenvolvimento do <a href="https://github.com/tracefina
 Para conseguir subir o projeto, irei utilizar Java versão 11 ou superior e PostgreSQL versão 12.11-1 ou superior.
 Para o banco de dados, precisa ter instalado o PostgreSQL e precisa executar o arquivo script inicial.
 Para conectar ao banco, precisamos também alterar as propriedades spring.datasource.username e spring.datasource.password.
+Para testar os endpoints eu estarei utilizando o Insomnia versão v2022.4.2.
 
 # Relatos
 ## 28/06/2022 - Dia 01
@@ -21,4 +22,12 @@ Hoje foi o primeiro dia em que foquei no projeto, eu estou muito animado em pode
 Como podemos ver escolhi dividir em duas tabelas(porém mais na frente percebi que não precisava disso), depois desse esboço eu parti pro SQL, escrevi o script, em seguida rodei e tudo deu certo!
 Em seguida passei para o Java e comecei a modelar as entidades, fiz o repository, fiz services e por fim controllers.
 Depois de ter feito as funcionalidades de cadastrar uma carteira, exibir o limite de uma carteira parti para a funcionalidade que considerei mais difícil, que era a funcionalidade de realizar pagamento.
-Inicialmente eu acreditava que seria necessário uma entidade chamada Payment, pois achava que deveria armazenar as informações, porém depois de ter finalizado uma parte da funcionalidade de realizar pagamento eu percebi que Payment não estava sendo utilizado em canto nenhum! Logo eu exclui e atualizei em outros lugares onde citava Payment. Ainda tenho bastante coisas para desenvolver mas estou bem animado 🤩
+Inicialmente eu acreditava que seria necessário uma entidade chamada Payment, pois achava que deveria armazenar as informações, porém depois de ter finalizado uma parte da funcionalidade de realizar pagamento eu percebi que Payment não estava sendo utilizado em canto nenhum! Logo eu exclui e atualizei em outros lugares onde citava Payment. Ainda tenho bastante coisas para desenvolver mas estou bem animado 🤩.
+
+Depois de ter passado um tempo longe do PC fiquei pensando mais sobre o problema em si e acabei conseguindo encontrar uma solução, resta implementar somente a parte de calcular os valores, e substituir os limites (Mas oq importa é que deu tudo certo). A minha classe service ficou enorme, tive que mexer na entidade de novo também mas acredito que cheguei em uma solução! 😁 Mas ainda tem muito o que refatorar, tem muitos testes unitários para desenvolver e quem sabe ir atrás de conhecer e implemntar alguns pontos da aba "Seria Legal"
+
+Ah! E já ia me esquecendo... Eu implementei umas pequenas regras de negócio. 
+- Não é possível cadastrar uma carteira com mesmo nome
+- Não foi encontrada uma carteira com o id informado
+
+Ainda falta algumas regras de negócio a serem implementadas... Mas fico feliz com o andamento do projeto!
