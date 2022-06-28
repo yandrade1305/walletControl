@@ -8,7 +8,6 @@ import java.math.BigDecimal;
 public class WalletForm {
     private Long idWallet;
     private String ownerName;
-    private BigDecimal walletValue;
 
     public void setIdWallet(Long idWallet) {
         this.idWallet = idWallet;

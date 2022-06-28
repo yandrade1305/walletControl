@@ -27,6 +27,5 @@ public class Wallet {
     public Wallet(WalletForm walletForm) {
         this.idWallet = walletForm.getIdWallet();
         this.ownerName = walletForm.getOwnerName();
-        this.walletValue = walletForm.getWalletValue();
     }
 }
