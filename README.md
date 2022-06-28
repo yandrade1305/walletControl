@@ -14,7 +14,10 @@ Para conectar ao banco, precisamos também alterar as propriedades spring.dataso
 # Relatos
 ## 28/06/2022 - Dia 01
 Hoje foi o primeiro dia em que foquei no projeto, eu estou muito animado em poder aplicar os meus conhecimentos que aprendi ao longo de semanas. Comecei fazendo um Diagrama Entidade Relacionamento.
-![DER](https://user-images.githubusercontent.com/48693812/176249895-72b74f10-3c40-45b0-8e49-ae3b71d79ed3.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48693812/176249895-72b74f10-3c40-45b0-8e49-ae3b71d79ed3.png" /> 
+</p>
+
 Como podemos ver escolhi dividir em duas tabelas(porém mais na frente percebi que não precisava disso), depois desse esboço eu parti pro SQL, escrevi o script, em seguida rodei e tudo deu certo!
 Em seguida passei para o Java e comecei a modelar as entidades, fiz o repository, fiz services e por fim controllers.
 Depois de ter feito as funcionalidades de cadastrar uma carteira, exibir o limite de uma carteira parti para a funcionalidade que considerei mais difícil, que era a funcionalidade de realizar pagamento.
