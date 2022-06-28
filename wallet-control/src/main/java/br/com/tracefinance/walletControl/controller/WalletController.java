@@ -1,12 +1,11 @@
 package br.com.tracefinance.walletControl.controller;
 
 import br.com.tracefinance.walletControl.domain.form.WalletForm;
+import br.com.tracefinance.walletControl.exceptions.CarteiraDuplicadaException;
+import br.com.tracefinance.walletControl.exceptions.CarteiraNaoEncontradaException;
 import br.com.tracefinance.walletControl.service.WalletService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 
@@ -23,9 +22,18 @@ public class WalletController {
     public ResponseEntity<?> cadastrarCarteira(@RequestBody WalletForm form){
         try {
             return ResponseEntity.created(URI.create("")).body(service.cadastar(form));
-        } catch (Exception ex) {
-            return ResponseEntity.badRequest().build();
+        } catch (CarteiraDuplicadaException ex) {
+            return ResponseEntity.badRequest().body(ex.getMessage());
         }
     }
 
+    @GetMapping(path = "/{idWallet}/limits")
+    public ResponseEntity<?> detalharLimite(@PathVariable Long idWallet){
+        try {
+            return ResponseEntity.ok(service.obterPor(idWallet));
+        } catch (CarteiraNaoEncontradaException ex) {
+            return  ResponseEntity.badRequest().body(ex.getMessage());
+        }
+
+    }
 }

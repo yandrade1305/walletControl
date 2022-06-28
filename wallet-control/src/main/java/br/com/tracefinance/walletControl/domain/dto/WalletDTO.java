@@ -4,8 +4,6 @@ import br.com.tracefinance.walletControl.domain.entity.Wallet;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-
 @NoArgsConstructor
 @Getter
 public class WalletDTO {
