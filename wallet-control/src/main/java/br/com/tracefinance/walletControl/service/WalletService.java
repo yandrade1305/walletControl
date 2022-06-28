@@ -11,6 +11,8 @@ import br.com.tracefinance.walletControl.exceptions.CarteiraNaoEncontradaExcepti
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 @Service
@@ -25,7 +27,6 @@ public class WalletService {
         Optional<Wallet> optWallet = repository.findByOwnerName(form.getOwnerName());
         if (!optWallet.isPresent()) {
             Wallet wallet = new Wallet(form);
-            wallet.setWalletValue(BigDecimal.ZERO);
             repository.save(wallet);
             return new WalletDTO(wallet);
         } else {
@@ -43,10 +44,71 @@ public class WalletService {
     }
 
     public String realizarPagamento(Long idWallet, PaymentForm form){
+        // Primeiro verifica se o limite é do mesmo dia, se não for atualiza
+        // Segundo verifica se o pagamento é inferior a 1000
+        // Terceiro verifica dia da semana
+        // Quarto verifica se o pagamento é diurno ou noturno
+        // quarto verifica dia da semana
         Optional<Wallet> optWallet = repository.findById(idWallet);
-        BigDecimal subtract = optWallet.get().getWalletValue().subtract(form.getAmount());
-        optWallet.get().setWalletValue(subtract);
-        repository.save(optWallet.get());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        LocalDateTime paymentDate = LocalDateTime.parse(form.getPaymentDate(), formatter);
+        if(paymentDate.isEqual(optWallet.get().getLastPayment())){
+            System.out.println("Mesmo dia");
+            int i = form.getAmount().compareTo(new BigDecimal("1000.00"));
+            if (i != 1){
+                System.out.println("Valor correto");
+                if ((paymentDate.getDayOfWeek().equals("SATURDAY")||paymentDate.getDayOfWeek().equals("SUNDAY"))){
+                    System.out.println("Realiza Operação de Fim de semana");
+                    if (paymentDate.getHour() >= 6 && paymentDate.getHour() < 18){
+                        System.out.println("Realiza a operação diurna");
+                    } else {
+                        System.out.println("Realiza operação noturna");
+                    }
+                } else {
+                    System.out.println("Realiza Operação de dia útil");
+                    if (paymentDate.getHour() >= 6 && paymentDate.getHour() < 18){
+                        System.out.println("Realiza a operação diurna");
+                    } else {
+                        System.out.println("Realiza operação noturna");
+                    }
+                }
+            } else {
+                System.out.println("Valor errado");
+            }
+        } else {
+            System.out.println("É diferente, logo atualizo o valor");
+            // Atualizo
+            int i = form.getAmount().compareTo(new BigDecimal("1000.00"));
+            if (i != 1){
+                System.out.println("Valor correto");
+                if ((paymentDate.getDayOfWeek().equals("SATURDAY")||paymentDate.getDayOfWeek().equals("SUNDAY"))){
+                    System.out.println("Realiza Operação de Fim de semana");
+                    if (paymentDate.getHour() >= 6 && paymentDate.getHour() < 18){
+                        System.out.println("Realiza a operação diurna");
+                    } else {
+                        System.out.println("Realiza operação noturna");
+                    }
+                } else {
+                    System.out.println("Realiza Operação de dia útil");
+                    if (paymentDate.getHour() >= 6 && paymentDate.getHour() < 18){
+                        System.out.println("Realiza a operação diurna");
+                    } else {
+                        System.out.println("Realiza operação noturna");
+                    }
+                }
+            } else {
+                System.out.println("Valor errado");
+            }
+
+        }
+
+        
+
+//        BigDecimal subtract = optWallet.get().getWalletValue().subtract(form.getAmount());
+//        optWallet.get().setWalletValue(subtract);
+//        repository.save(optWallet.get());
+
+
         return "Pagamento Realizado com sucesso!";
     }
 }
