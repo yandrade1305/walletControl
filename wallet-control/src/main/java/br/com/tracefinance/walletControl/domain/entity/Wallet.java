@@ -1,5 +1,6 @@
 package br.com.tracefinance.walletControl.domain.entity;
 
+import br.com.tracefinance.walletControl.domain.form.WalletForm;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,4 +23,10 @@ public class Wallet {
     private String ownerName;
     @Column(name = "WALLET_VALUE")
     private BigDecimal walletValue;
+
+    public Wallet(WalletForm walletForm) {
+        this.idWallet = walletForm.getIdWallet();
+        this.ownerName = walletForm.getOwnerName();
+        this.walletValue = walletForm.getWalletValue();
+    }
 }
