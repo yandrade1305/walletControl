@@ -31,3 +31,10 @@ Ah! E já ia me esquecendo... Eu implementei umas pequenas regras de negócio.
 - Não foi encontrada uma carteira com o id informado
 
 Ainda falta algumas regras de negócio a serem implementadas... Mas fico feliz com o andamento do projeto!
+
+### 29/06/2022 - Dia 02
+Hoje foi o segundo dia desenvolvendo o projeto eu fiz alguns avanços e refatorações na funcionalidade de realizar o pagamento, a maioria delas foi realizar as operações em si. Optei em utilizar o BigDecimal para armazenar os valores, uma vez que como se trata de dinheiro o tipo BigDecimal é o mais recomendado. Depois de implementar os cálculos vi que ficou muito grande a classe de Service então refatorei e isolei todas essas operações em uma classe abstrata utilitária. Ainda tenho muito o que desenvolver, incluindo rever a questão de receber uma data e hora no padrão "dd/MM/yyyy HH:mm:ss" e converter para LocalDateTime (Achei que tinha resolvido mas estava errado 😭). Fora esses pontos, eu espero conseguir resolver o quanto antes e colocar as validações de:
+- Limite do pagamento
+- Limite do pagamento diurno, noturno, fim de semana e dia útil
+
+Está difícil, mas não impossível! Quero aprender como resolvo esses problemas pois sei que vai aparecer algo parecido no meu dia-a-dia! 💪📚

@@ -40,8 +40,8 @@ public class Wallet {
         this.ownerName = walletForm.getOwnerName();
         this.walletValue = new BigDecimal("5000.00");
         this.lastPayment = LocalDateTime.now();
-        this.dayTimePayment = BigDecimal.ZERO;
-        this.nocturnalPayment = BigDecimal.ZERO;
-        this.weekendPayment = BigDecimal.ZERO;
+        this.dayTimePayment = new BigDecimal("4000.00");
+        this.nocturnalPayment = new BigDecimal("1000.00");
+        this.weekendPayment = new BigDecimal("1000.00");
     }
 }
