@@ -35,6 +35,13 @@ Ainda falta algumas regras de negócio a serem implementadas... Mas fico feliz c
 ### 29/06/2022 - Dia 02
 Hoje foi o segundo dia desenvolvendo o projeto eu fiz alguns avanços e refatorações na funcionalidade de realizar o pagamento, a maioria delas foi realizar as operações em si. Optei em utilizar o BigDecimal para armazenar os valores, uma vez que como se trata de dinheiro o tipo BigDecimal é o mais recomendado. Depois de implementar os cálculos vi que ficou muito grande a classe de Service então refatorei e isolei todas essas operações em uma classe abstrata utilitária. Ainda tenho muito o que desenvolver, incluindo rever a questão de receber uma data e hora no padrão "dd/MM/yyyy HH:mm:ss" e converter para LocalDateTime (Achei que tinha resolvido mas estava errado 😭). Fora esses pontos, eu espero conseguir resolver o quanto antes e colocar as validações de:
 - Limite do pagamento
-- Limite do pagamento diurno, noturno, fim de semana e dia útil
 
 Está difícil, mas não impossível! Quero aprender como resolvo esses problemas pois sei que vai aparecer algo parecido no meu dia-a-dia! 💪📚
+Antes de finalizar o dia de hoje, eu retornei no meu código e vi diversos problemas... alguns eram simples (não estava atualizando a data) e outros mais difíceis (os limites não estavam relacionando-se bem)
+Então decidi jogar todo aquele meu código fora e refazer do 0. Voltei pro drawn.io e comecei a desenhar o fluxograma, consegui terminar o fluxograma e acredito que esteja tudo certo!
+Abaixo vou deixar o fluxograma que montei.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48693812/176566776-7404cfb9-6e15-4088-b5dc-a37627a7b098.png"/>
+  Clique <a href="https://user-images.githubusercontent.com/48693812/176566776-7404cfb9-6e15-4088-b5dc-a37627a7b098.png">aqui</a> para ver a imagem expandida.
+</p>
+E com isto finalizo os trabalhos do dia 2... Acho q tô conseguindo me sair bem... Tem umas repetições mas primeiro quero fazer funcionar para depois refatorar!
