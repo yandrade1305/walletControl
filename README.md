@@ -41,7 +41,7 @@ Antes de finalizar o dia de hoje, eu retornei no meu código e vi diversos probl
 Então decidi jogar todo aquele meu código fora e refazer do 0. Voltei pro drawn.io e comecei a desenhar o fluxograma, consegui terminar o fluxograma e acredito que esteja tudo certo!
 Abaixo vou deixar o fluxograma que montei.
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/48693812/176566776-7404cfb9-6e15-4088-b5dc-a37627a7b098.png"/>
-  Clique <a href="https://user-images.githubusercontent.com/48693812/176566776-7404cfb9-6e15-4088-b5dc-a37627a7b098.png">aqui</a> para ver a imagem expandida.
+  <img src="https://user-images.githubusercontent.com/48693812/176567551-294e5d8a-509c-431f-9951-7b338321cccb.png"/>
+  Clique <a href="https://user-images.githubusercontent.com/48693812/176567551-294e5d8a-509c-431f-9951-7b338321cccb.png">aqui</a> para ver a imagem expandida.
 </p>
 E com isto finalizo os trabalhos do dia 2... Acho q tô conseguindo me sair bem... Tem umas repetições mas primeiro quero fazer funcionar para depois refatorar!
