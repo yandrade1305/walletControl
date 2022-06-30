@@ -45,3 +45,16 @@ Abaixo vou deixar o fluxograma que montei.
   Clique <a href="https://user-images.githubusercontent.com/48693812/176567551-294e5d8a-509c-431f-9951-7b338321cccb.png">aqui</a> para ver a imagem expandida.
 </p>
 E com isto finalizo os trabalhos do dia 2... Acho q tô conseguindo me sair bem... Tem umas repetições mas primeiro quero fazer funcionar para depois refatorar!
+
+### 30/06/2022 - Dia 03
+Hoje foi o terceiro dia de projeto, botei em prática aquele fluxograma que elaborei ontem. E surpreendentemente deu certo! 😄 senti tanta alegria na hora (foi inesquecível!). Porém... tava errado! 😩 E o que tinha de errado? 😕 Simples, eu tinha esquecido de verificar se os limites tanto diurno quanto noturno estavam de acordo com a quantidade informada no pagamento! Então alterei primeiro no código e depois no fluxograma! E aumentou bastante o fluxograma com essa simples mudança. Mas acredito que está "blindado" meu código 😎. Agora só basta eu refatorar, talvez isolar essa lógica em outra classe... Vou pensar nos próximos passos. Seria uma boa eu ver algum padrão de projeto e aplicar,mas também tenho que alterar o retorno da função de cadastrar e limpar os println's. Abaixo está o novo fluxograma e também a nova tabela de Wallet.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48693812/176717810-0b1535d0-1b22-41fd-b846-eeb3b8a40c54.png"/>
+  Clique <a href="https://user-images.githubusercontent.com/48693812/176717810-0b1535d0-1b22-41fd-b846-eeb3b8a40c54.png">aqui</a> para ver a imagem expandida.
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48693812/176720108-949caa00-f896-489d-8f69-4758c1db3de6.png"/>
+  Clique <a href="https://user-images.githubusercontent.com/48693812/176720108-949caa00-f896-489d-8f69-4758c1db3de6.png">aqui</a> para ver a imagem expandida.
+</p>

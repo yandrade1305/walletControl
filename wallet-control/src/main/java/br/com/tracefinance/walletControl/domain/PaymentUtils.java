@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.Optional;
 
 public abstract class  PaymentUtils {
-    public static int getCompareLimit(BigDecimal limit, BigDecimal form) {
+    public static int getCompareLimit(BigDecimal form, BigDecimal limit) {
         int compareLimit = limit.compareTo(form);
         return compareLimit;
     }
@@ -30,6 +30,6 @@ public abstract class  PaymentUtils {
     public static void weekendPayment(BigDecimal weekendLimit, PaymentForm form, Optional<Wallet> optWallet) {
         BigDecimal newLimit = weekendLimit.subtract(form.getAmount());
         optWallet.get().setWeekendPayment(newLimit);
-        businessDay(optWallet, form);
+        optWallet.get().setWalletValue(newLimit);
     }
 }
