@@ -1,4 +1,4 @@
-![Badge Em Construção](http://img.shields.io/static/v1?label=STATUS&message=EMCONSTRUÇÃO&color=yellow&style=for-the-badge)
+![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
 ![Badge Java](http://img.shields.io/static/v1?label=JAVA&message=11.0.13&color=yellow&style=for-the-badge)
 ![Badge Spring](http://img.shields.io/static/v1?label=SPRING&message=2.7.1&color=GREEN&style=for-the-badge)
 ![Badge PostgreSQL](http://img.shields.io/static/v1?label=POSTGRESQL&message=12.11-1&color=blue&style=for-the-badge)
@@ -16,7 +16,7 @@ Repositório voltado ao desenvolvimento do <a href="https://github.com/tracefina
 
 ## Configurações para subir o projeto
 Para conseguir subir o projeto, irei utilizar Java versão 11 ou superior e PostgreSQL versão 12.11-1 ou superior.
-Para o banco de dados, precisa ter instalado o PostgreSQL e precisa executar o arquivo script inicial.
+Para o banco de dados, precisa ter instalado o PostgreSQL e precisa executar o arquivo ``script-inicial.sql``.
 Para conectar ao banco, precisamos também alterar as propriedades spring.datasource.username e spring.datasource.password.
 Para testar os endpoints eu estarei utilizando o Insomnia versão v2022.4.2.
 
@@ -47,9 +47,9 @@ Antes e de executar as classes de teste é necessário limpar o banco de dados, 
 ## Relatos
 ## 28/06/2022 - Dia 01
 Hoje foi o primeiro dia em que foquei no projeto, eu estou muito animado em poder aplicar os meus conhecimentos que aprendi ao longo de semanas. Comecei fazendo um Diagrama Entidade Relacionamento.
-<p allign="center">
+<p align="center">
   <img width="372px" height="372px" src="https://user-images.githubusercontent.com/48693812/176249895-72b74f10-3c40-45b0-8e49-ae3b71d79ed3.png" />
-   <p allign="center">
+   <p align="center">
     <i>
        Clique <a width="372px" height="372px" href="https://user-images.githubusercontent.com/48693812/176249895-72b74f10-3c40-45b0-8e49-ae3b71d79ed3.png">aqui</a> para ver a imagem expandida.
     </i>   
@@ -76,9 +76,9 @@ Está difícil, mas não impossível! Quero aprender como resolvo esses problema
 Antes de finalizar o dia de hoje, eu retornei no meu código e vi diversos problemas... alguns eram simples (não estava atualizando a data) e outros mais difíceis (os limites não estavam relacionando-se bem)
 Então decidi jogar todo aquele meu código fora e refazer do 0. Voltei pro drawn.io e comecei a desenhar o fluxograma, consegui terminar o fluxograma e acredito que esteja tudo certo!
 Abaixo vou deixar o fluxograma que montei.
-<p allign="center">
+<p align="center">
   <img width="372px" height="372px" src="https://user-images.githubusercontent.com/48693812/176567551-294e5d8a-509c-431f-9951-7b338321cccb.png"/>
-  <p allign="center">
+  <p align="center">
     <i>
       Clique <a width="372px" height="372px" href="https://user-images.githubusercontent.com/48693812/176567551-294e5d8a-509c-431f-9951-7b338321cccb.png">aqui</a> para ver a imagem expandida.
     </i>
@@ -89,18 +89,18 @@ E com isto finalizo os trabalhos do dia 2... Acho q tô conseguindo me sair bem.
 ### 30/06/2022 - Dia 03
 Hoje foi o terceiro dia de projeto, botei em prática aquele fluxograma que elaborei ontem. E surpreendentemente deu certo! 😄 senti tanta alegria na hora (foi inesquecível!). Porém... tava errado! 😩 E o que tinha de errado? 😕 Simples, eu tinha esquecido de verificar se os limites tanto diurno quanto noturno estavam de acordo com a quantidade informada no pagamento! Então alterei primeiro no código e depois no fluxograma! E aumentou bastante o fluxograma com essa simples mudança. Mas acredito que está "blindado" meu código 😎. Agora só basta eu refatorar, talvez isolar essa lógica em outra classe... Vou pensar nos próximos passos. Seria uma boa eu ver algum padrão de projeto e aplicar,mas também tenho que alterar o retorno da função de cadastrar e limpar os println's. Abaixo está o novo fluxograma e também a nova tabela de Wallet.
 
-<p allign="center">
+<p align="center">
   <img id="fluxograma" width="372px" height="372px" src="https://user-images.githubusercontent.com/48693812/176717810-0b1535d0-1b22-41fd-b846-eeb3b8a40c54.png"/>
-  <p allign="center">
+  <p align="center">
     <i>
       Clique <a href="https://user-images.githubusercontent.com/48693812/176717810-0b1535d0-1b22-41fd-b846-eeb3b8a40c54.png">aqui</a> para ver a imagem expandida.
     </i>     
 </p>
 
 
-<p allign="center">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/48693812/176885546-41108235-3ec6-48b5-a97e-a6984956c5a2.png"/>
-  <p allign="center">
+  <p align="center">
     <i>
     Clique <a href="https://user-images.githubusercontent.com/48693812/176885546-41108235-3ec6-48b5-a97e-a6984956c5a2.png">aqui</a> para ver a imagem expandida.
     </i>  
@@ -110,9 +110,9 @@ Hoje foi o terceiro dia de projeto, botei em prática aquele fluxograma que elab
 ### 01/07/2022 - Dia 04
 
 Hoje foi o quarto e último dia de desenvolvimento do projeto! Hoje elaborei testes unitários para as Controller's. Pois queria ter certeza de que meu código estava cobrindo vários casos de uso e satisfatoriamente ele cobriu todos! Isso me deixou muito feliz! 😆 Em seguida eu fui refatorar aquele código gigantesco que estava na service, o Intellij me ajudou nessa hora. E enquanto tava refatorando e rodando os testes para ver se nada quebrava eu percebi que podia evitar de comparar os turnos diurno e noturnos quando se trata de ser final de semana (Tava suspeitando um pouco quando tava revendo o fluxograma) vou deixar aqui embaixo a versão final. 
-<p allign="center">
+<p align="center">
   <img width="372px" height="372px" src="https://user-images.githubusercontent.com/48693812/176973957-80bb4f43-d2ce-46cd-8f5b-c79d0628fede.png"/>
-  <p allign="center">
+  <p align="center">
     <i>
     Clique <a href="https://user-images.githubusercontent.com/48693812/176973957-80bb4f43-d2ce-46cd-8f5b-c79d0628fede.png">aqui</a> para ver a imagem expandida.
     </i>  
