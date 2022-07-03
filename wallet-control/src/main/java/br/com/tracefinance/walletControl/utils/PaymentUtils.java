@@ -1,4 +1,4 @@
-package br.com.tracefinance.walletControl.domain;
+package br.com.tracefinance.walletControl.utils;
 
 import br.com.tracefinance.walletControl.domain.entity.Wallet;
 import br.com.tracefinance.walletControl.domain.form.PaymentForm;

@@ -5,7 +5,7 @@ import br.com.tracefinance.walletControl.domain.dto.WalletLimitDTO;
 import br.com.tracefinance.walletControl.domain.entity.Wallet;
 import br.com.tracefinance.walletControl.domain.form.PaymentForm;
 import br.com.tracefinance.walletControl.domain.form.WalletForm;
-import br.com.tracefinance.walletControl.domain.repository.WalletRepository;
+import br.com.tracefinance.walletControl.repository.WalletRepository;
 import br.com.tracefinance.walletControl.exceptions.*;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.time.format.DateTimeFormatter;
 
 import java.util.Optional;
 
-import static br.com.tracefinance.walletControl.domain.PaymentUtils.*;
+import static br.com.tracefinance.walletControl.utils.PaymentUtils.*;
 
 @Service
 public class WalletService {

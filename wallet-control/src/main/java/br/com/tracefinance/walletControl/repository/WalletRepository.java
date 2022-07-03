@@ -1,4 +1,4 @@
-package br.com.tracefinance.walletControl.domain.repository;
+package br.com.tracefinance.walletControl.repository;
 
 import br.com.tracefinance.walletControl.domain.entity.Wallet;
 import org.springframework.data.jpa.repository.JpaRepository;
