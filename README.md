@@ -4,8 +4,6 @@
 ![Badge PostgreSQL](http://img.shields.io/static/v1?label=POSTGRESQL&message=12.11-1&color=blue&style=for-the-badge)
 
 # Wallet Control
-Repositório voltado ao desenvolvimento do <a href="https://github.com/tracefinance/backend-challenge"> Challenge Back-end para a empresa Trace Finance </a>
-
 
 ## Índice 
 
@@ -15,6 +13,9 @@ Repositório voltado ao desenvolvimento do <a href="https://github.com/tracefina
 * [Relatos](#relatos)
 
 ## Configurações para subir o projeto
+
+Repositório voltado ao desenvolvimento do <a href="https://github.com/tracefinance/backend-challenge"> Challenge Back-end para a empresa Trace Finance </a>
+
 Para conseguir subir o projeto, irei utilizar Java versão 11 ou superior e PostgreSQL versão 12.11-1 ou superior.
 Para o banco de dados, precisa ter instalado o PostgreSQL e precisa executar o arquivo ``script-inicial.sql``.
 Para conectar ao banco, precisamos também alterar as propriedades spring.datasource.username e spring.datasource.password.
